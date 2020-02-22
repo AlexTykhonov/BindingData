@@ -9,6 +9,8 @@ import com.tae.bindingdata.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    Cat cat = new Cat("grey",10);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setTemp("Hello world!");
         activityMainBinding.setLocation("Hamburg");
-
+        activityMainBinding.setCat(cat);
     }
 
 }

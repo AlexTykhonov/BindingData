@@ -5,6 +5,7 @@
     <data>
         <variable name="temp" type="String"/>
         <variable name="location" type="String"/>
+        <variable name="cat" type="com.tae.bindingdata.Cat" />
 
     </data>
 
@@ -18,7 +19,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{temp}"
+        android:text="@{cat.color}"
+        android:visibility="@{cat.age>5 ? android.view.View.VISIBLE : android.view.View.GONE}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -28,7 +30,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{location}"
+        android:text="@{cat.age.toString()}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
